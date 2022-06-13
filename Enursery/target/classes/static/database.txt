@@ -1,0 +1,75 @@
+
+-- creating database nursery;
+
+create database nursery;
+
+--  Using database nursery;
+
+use nursery;
+
+
+--  creating table user;
+
+create table user(
+fname varchar(20) ,
+ lname varchar(20), 
+DOB varchar(20),
+email  varchar(20), 
+number varchar(20) ,
+ username varchar(20),
+ password varchar(20) ,
+ address varchar(20)
+primary key(username );   
+
+
+-- creating table  for admin ;
+
+
+create table admin( 
+name varchar(20), 
+username varchar(20) ,
+ password varchar(20));
+
+
+
+--creating table for nursery as service ;
+
+
+create table service( 
+name varchar(20),
+ number varchar(20), 
+username  varchar(20),
+ password varchar(20),
+  location varchar(20) ,
+hours  varchar(20),  
+ status varchar(20));
+
+
+select * from admin;
+select * from user;
+select * from service;
+
+
+ --creating table for adding plants as addservices;
+ 
+ 
+create table addservice(
+ username varchar(20),
+plantId varchar(20) ,
+plantname varchar(20)  , 
+planttype varchar(20), 
+ season  varchar(20), 
+origin  varchar(20) , 
+variety varchar(20));
+
+-- create table for adding plant categories as servicecategories;
+
+create table servicecategories(
+ plantId varchar,
+plantname varchar(20)  , 
+planttype varchar(20));
+
+
+select * from servicecategories;
+select * from addservice;
+
